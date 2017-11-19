@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 typedef struct _node
 {
 	int data;
@@ -15,7 +16,7 @@ int main(){
 	Node * newNode = NULL;
 	int readData;
 	while(1){
-		printf("ÀÚ¿¬¼öÀÔ·Â:");
+		printf("ìì—°ìˆ˜ì…ë ¥:");
 		scanf("%d",&readData);
 		if(readData<1)
 			break;
@@ -28,10 +29,10 @@ int main(){
 			tail->next=newNode;
 				
 		tail=newNode;
-		printf("ÀÔ·Â:");
+		printf("ì…ë ¥:");
 		scanf("%d",&j);
 		if(j==1){
-			printf("ÀÚ¿¬¼öÀÔ·Â:");
+			printf("ìì—°ìˆ˜ì…ë ¥:");
 			scanf("%d",&readData);
 			newNode = (Node*)malloc(sizeof(Node));
 			newNode->data=readData;
@@ -44,7 +45,7 @@ int main(){
 	cur = head;
 	printf("%d\n",cur->data);
 	while(cur->next!=NULL){
-		printf("µ¥ÀÌÅÍ:%d\n",cur->data);
+		printf("ë°ì´í„°:%d\n",cur->data);
 		cur=cur->next;
 	}
 		
